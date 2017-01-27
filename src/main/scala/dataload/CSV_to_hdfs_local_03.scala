@@ -10,7 +10,6 @@ object CSV_to_hdfs_local_03 {
   def main(args: Array[String]) {
 
     // user to login in to hdfs system.
-
     val output = new FileOutputStream("application.conf")
     System.setProperty("HADOOP_USER_NAME", "edureka")
 

@@ -2,10 +2,7 @@ package dataload
 
 import org.apache.spark.sql.{SaveMode, SparkSession}
 
-/**
-  * Created by janaidu on 27/01/2017.
-  */
-object Read_From_CSV_01{
+object Read_From_CSV_01 {
   def main(args: Array[String]) {
 
     val spark = SparkSession
@@ -15,7 +12,7 @@ object Read_From_CSV_01{
       .getOrCreate()
 
     // Reading from csv file
-    val df=spark.read.format("csv").option("header", "false").load("customer.csv")
+    val df = spark.read.format("csv").option("header", "false").load("customer.csv")
 
     df.show()
     df printSchema()
